@@ -1,0 +1,25 @@
+.HomeParentDiv {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.HomeQuoteDiv {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.HomeQuoteText {
+
+}
+
+.HomeQuotePerson {
+
+}

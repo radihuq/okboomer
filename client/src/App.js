@@ -2,11 +2,13 @@ import React from 'react';
 import './cssreset.css';
 import './App.css';
 
+import Home from './Components/Home/Home';
+
 const App = () => {
 
     return (
         <div className="App">
-            <p>This is App.js</p>
+            <Home />
         </div>
     );
 }
