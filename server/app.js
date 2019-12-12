@@ -2,9 +2,10 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const cors = require('cors');
+require('dotenv/config');
 
-const SERVER_PORT = 3000;
-const DB_CONNECTION = ``;
+const SERVER_PORT = process.env.SERVER_PORT;
+const DB_CONNECTION = process.env.DB_CONNECTION;
 
 //Connect to DB
 mongoose.connect(DB_CONNECTION, {useNewUrlParser: true, useUnifiedTopology: true}, () => {

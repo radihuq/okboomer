@@ -1,7 +1,7 @@
 {
-    "name": "node-app-template",
+    "name": "okboomerguru",
     "version": "1.0.0",
-    "description": "",
+    "description": "life philosophy",
     "main": "app.js",
     "scripts": {
         "start": "nodemon start app.js",
@@ -9,16 +9,17 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/USER/REPO"
+        "url": "git+https://github.com/radihuq/okboomer"
     },
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/USER/REPO"
+        "url": "https://github.com/radihuq/okboomer"
     },
-    "hompeage": "https://github.com/USER/REPO",
+    "hompeage": "https://github.com/radihuq/okboomer",
     "dependencies": {
         "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
         "express": "^4.17.1",
         "mongoose": "^5.7.12"
     },
