@@ -5,7 +5,7 @@ const HomeFooter = () => {
 
     return (
         <div className="HomeFooterDiv">
-            <a href="https://twitter.com/okboomer_guru" target="_blank">
+            <a href="https://twitter.com/okboomer_guru" target="_blank" rel="noopener noreferrer">
                 <img className="HomeFooterImage" src={TwitterLogo} />
             </a>
         </div>

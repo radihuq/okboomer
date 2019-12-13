@@ -17,8 +17,8 @@ app.use(cors());
 app.use(express.json());
 
 //Import Routes
-const exampleRoute = require('./routes/Example');
-app.use(`/api/example`, exampleRoute); // localhost:3000/api/example/
+const quoteRoute = require('./routes/Quote');
+app.use(`/api/quote`, quoteRoute);
 
 //Start Server
 const os = require('os');

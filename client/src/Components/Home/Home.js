@@ -3,7 +3,7 @@ import './Home.css';
 
 import HomeTheme from './HomeTheme';
 import HomeQuote from './HomeQuote';
-import HomeFooter from './HomeFooter';
+// import HomeFooter from './HomeFooter';
 
 const Home = () => {
 
