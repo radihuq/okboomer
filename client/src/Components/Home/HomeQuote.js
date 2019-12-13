@@ -7,10 +7,8 @@ const HomeQuote = ({currenttheme}) => {
 
     useEffect(() => {
         const Quotes = [
-            {quote: `if you can't handle me at my worst, then you sure as hell don't deserve me at my best.`, person: `Marilyn Monroe`},
-            {quote: `Be yourself; everyone else is already taken.`, person: `john`},
-            {quote: `Two things are infinite: the universe and human stupidity; and I'm not sure about the universe`, person: `Albert Einstein`},
-            {quote: `So many books, so little time.`, person: `Frank Zappa`}
+            {id: 1000, quote: `Be the uncommon amongst the uncommon`, person: `David Goggins`},
+            {id: 1000, quote: `We say "peace of mind" but really what we want is peace from mind`, person: `Naval Ravikant`},
         ];
 
         let index = getRandomInt(Quotes.length);
@@ -29,9 +27,13 @@ const HomeQuote = ({currenttheme}) => {
 
     return (
         <div className="HomeQuoteDiv">
-            <p className="HomeQuoteText" style={{color: currenttheme.primary}}>{currentQuote.quote}</p>
-            <p className="HomeQuotePerson" style={{color: currenttheme.primary}}>{currentQuote.person}</p>
-            <p className="HomeNewQuoteButton" onClick={handleNewQuoteClick} style={{color: currenttheme.primary, border: `1px solid ${currenttheme.primary}`}}>New Quote</p>
+            <div className="HomeQuoteTextDiv">
+                <p className="HomeQuoteText" style={{color: currenttheme.primary}}>{currentQuote.quote}</p>
+                <p className="HomeQuotePerson" style={{color: currenttheme.primary}}>{currentQuote.person}</p>
+            </div>
+            <div className="HomeQuoteButtonDiv">
+                <p className="HomeNewQuoteButton" onClick={handleNewQuoteClick} style={{color: currenttheme.primary, border: `1px solid ${currenttheme.primary}`}}>New Quote</p>
+            </div>
         </div>
     );
 }

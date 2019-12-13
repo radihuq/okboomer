@@ -28,7 +28,7 @@ const Home = () => {
         <div className="HomeParentDiv" style={{backgroundColor: currentTheme.background}}>
             <HomeTheme themes={Themes} currenttheme={currentTheme} handlethemechange={handleThemeChange}/>
             <HomeQuote currenttheme={currentTheme} />
-            <HomeFooter />
+            {/* <HomeFooter /> */}
         </div>
     );
 }
