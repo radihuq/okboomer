@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv/config');
+const bodyParser = require('body-parser');
 
 const SERVER_PORT = process.env.SERVER_PORT;
 const DB_CONNECTION = process.env.DB_CONNECTION;
@@ -14,7 +15,8 @@ mongoose.connect(DB_CONNECTION, {useNewUrlParser: true, useUnifiedTopology: true
 
 //Middlewares
 app.use(cors());
-app.use(express.json());
+app.use(bodyParser.urlencoded({extended: false}));
+// app.use(express.json());
 
 //Import Routes
 const quoteRoute = require('./routes/Quote');
