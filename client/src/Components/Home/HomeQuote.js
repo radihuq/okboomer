@@ -13,7 +13,8 @@ const HomeQuote = ({currenttheme}) => {
             {quote: `So many books, so little time.`, person: `Frank Zappa`}
         ];
 
-        setCurrentQuote(Quotes[getRandomInt(Quotes.length - 1)]);
+        let index = getRandomInt(Quotes.length);
+        setCurrentQuote(Quotes[index]);
 
         function getRandomInt(max) {
             return Math.floor(Math.random() * Math.floor(max));
@@ -29,8 +30,8 @@ const HomeQuote = ({currenttheme}) => {
     return (
         <div className="HomeQuoteDiv">
             <p className="HomeQuoteText" style={{color: currenttheme.primary}}>{currentQuote.quote}</p>
-            <p className="HomeQuotePerson" style={{color: currenttheme.primary}}>-{currentQuote.person}</p>
-            <button onClick={handleNewQuoteClick}>New Quote</button>
+            <p className="HomeQuotePerson" style={{color: currenttheme.primary}}>{currentQuote.person}</p>
+            <p className="HomeNewQuoteButton" onClick={handleNewQuoteClick} style={{color: currenttheme.primary, border: `1px solid ${currenttheme.primary}`}}>New Quote</p>
         </div>
     );
 }

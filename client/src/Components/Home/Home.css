@@ -1,15 +1,32 @@
 .HomeParentDiv {
     height: 100%;
     width: 100%;
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
+}
+
+.HomeThemeOptions {
+    grid-row: 1;
+    margin: 0 auto;
+    height: 100%;
+    width: 90%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
+.HomeThemeItem {
+    margin: 0 5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
 .HomeQuoteDiv {
-    height: 80%;
-    width: 80%;
+    grid-row: 2;
+    margin: 0 auto;
+    height: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,9 +34,36 @@
 }
 
 .HomeQuoteText {
-
+    font-size: 1.5em;
+    text-align: center;
 }
 
 .HomeQuotePerson {
+    margin: 10px 0 1em 0;
+    font-size: 0.75em;
+}
 
+.HomeNewQuoteButton {
+    margin: 1em 0;
+    padding: 10px;
+    border-radius: 1em;
+    font-size: 0.5em;
+}
+
+.HomeNewQuoteButton:hover { 
+    cursor: default;
+}
+
+.HomeFooterDiv {
+    grid-row: 3;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.HomeFooterImage {
+    height: 50px;
+    width: 50px;
 }

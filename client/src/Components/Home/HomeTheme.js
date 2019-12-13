@@ -8,9 +8,18 @@ const HomeTheme = ({themes, currenttheme, handlethemechange}) => {
     }
 
     return (
-        <div>
+        <div className="HomeThemeOptions">
             {themes.map((theme, index) => (
-                <button key={`theme_${index}`} onClick={handleButtonClick} id={theme.id}>{`THEME ${theme.id}`}</button>
+                <div 
+                key={`theme_${index}`} 
+                onClick={handleButtonClick} 
+                id={theme.id}
+                className="HomeThemeItem"
+                style={{
+                    backgroundColor: theme.background,
+                    border: `1px solid ${currenttheme.primary}`
+                }}
+                />
             ))}
         </div>
     );
