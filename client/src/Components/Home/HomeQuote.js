@@ -52,7 +52,7 @@ const HomeQuote = ({currenttheme}) => {
                 </div>
                 :
 
-                ((!quotes) || (quotes.length > 0)) ?
+                ((!quotes) || (quotes.length < 1)) ?
                     <div className="HomeQuoteTextDiv">
                         <p className="HomeQuoteText" style={{color: currenttheme.primary}}>No Quotes Loaded</p>
                     </div>
