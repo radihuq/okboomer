@@ -26,13 +26,16 @@ const HomeQuote = ({currenttheme}) => {
 
     useEffect(() => {
         if (dataLoaded) {
-            let index = getRandomInt(quotes.length);
-            setCurrentQuote(quotes[index]);
-    
-            function getRandomInt(max) {
-                return Math.floor(Math.random() * Math.floor(max));
+            if (quotes) {
+                if (quotes.length > 0) {
+                    let index = getRandomInt(quotes.length);
+                    setCurrentQuote(quotes[index]);
+            
+                    function getRandomInt(max) {
+                        return Math.floor(Math.random() * Math.floor(max));
+                    }
+                }
             }
-    
             setNewQuote(false);
         }
     }, [newQuote]);
@@ -43,16 +46,23 @@ const HomeQuote = ({currenttheme}) => {
 
     return (
         <div className="HomeQuoteDiv">
-                {!dataLoading ? 
+                {!dataLoaded ? 
                 <div className="HomeQuoteTextDiv">
                     <p className="HomeQuoteText" style={{color: currenttheme.primary}}>Loading...</p> 
                 </div>
                 :
-                <div className="HomeQuoteTextDiv">
-                    <p className="HomeQuoteText" style={{color: currenttheme.primary}}>{currentQuote.quote}</p>
-                    <p className="HomeQuotePerson" style={{color: currenttheme.primary}}>{currentQuote.person}</p>                
-                </div>
+
+                ((!quotes) || (quotes.length > 0)) ?
+                    <div className="HomeQuoteTextDiv">
+                        <p className="HomeQuoteText" style={{color: currenttheme.primary}}>No Quotes Loaded</p>
+                    </div>
+                    :
+                    <div className="HomeQuoteTextDiv">
+                        <p className="HomeQuoteText" style={{color: currenttheme.primary}}>{currentQuote.quote}</p>
+                        <p className="HomeQuotePerson" style={{color: currenttheme.primary}}>{currentQuote.person}</p>                
+                    </div>
                 }
+
             <div className="HomeQuoteButtonDiv">
                 <p className="HomeNewQuoteButton" onClick={handleNewQuoteClick} style={{color: currenttheme.primary, border: `1px solid ${currenttheme.primary}`}}>New Quote</p>
             </div>
