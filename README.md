@@ -22,7 +22,7 @@ This project uses:
 ### Usage
 This application makes use of the Twilio Programmable SMS API to save received text messages into the database. [Follow this tutorial](https://www.twilio.com/docs/sms/tutorials/how-to-receive-and-reply-node-js) to set up your Twilio account if you do not already have an SMS number and a Twilio Webhook set up.
 
-You will also need to create a `.env` in the `client`, and `server` directory with the following parameters:
+You will also need to create a `.env` file in the `client`, and `server` directory with the following parameters:
 
 ##### ./client/.env
     PORT=
@@ -52,6 +52,6 @@ You will also need to create a `.env` in the `client`, and `server` directory wi
 ### Author
 This project was created by Radiun Huq. You can reach him at:
 
-`Email: radi@mrhuq.com`
+**Email**: radi@mrhuq.com
 
-`Twitter: @radiunhuq`
+**Twitter**: [@radiunhuq](https://twitter.com/radiunhuq)
